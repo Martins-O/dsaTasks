@@ -1,7 +1,7 @@
-def calculate_pi(n):
+def calculate_pi(length):
     pi = 0
     sign = 1
-    for i in range(1, n + 1, 2):
+    for i in range(1, length + 1, 2):
         pi += sign * 4 / i
         sign *= -1
     return pi
@@ -9,6 +9,6 @@ def calculate_pi(n):
 
 print("n\t\tπ Approximation")
 print("--------------------------------------")
-for n in range(1, 200000, 10000):
+for n in range(1, 2000000, 100000):
     pi_approx = calculate_pi(n)
-    print(f"{n}\t\t{pi_approx:.6f}")
+    print(f"{n}\t\t{pi_approx:.5f}")
